@@ -1,7 +1,7 @@
 COMP 2537 – Assignment 1
 Name: Veronica Sheng
 Set: 1C
-Hosting link: 
+Hosting link: https://comp-2537-assignment1-1q3n.onrender.com
 GitHub Link: https://github.com/Verokeli/COMP_2537_Assignment1
 Video Link: 
 
