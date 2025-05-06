@@ -7,10 +7,7 @@ const mongodb_password = process.env.MONGODB_PASSWORD;
 
 const atlasURI = `mongodb+srv://${mongodb_user}:${mongodb_password}@${mongodb_host}/?retryWrites=true`;
 
-const database = new MongoClient(atlasURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+const database = new MongoClient(atlasURI);
 
 database.connect()
   .then(() => {
