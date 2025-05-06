@@ -147,13 +147,13 @@ app.post("/login", async (req, res) => {
 
   const user = await userCollection.findOne({ email });
   if (!user) {
-    res.send("Invalid email or password. <a href='/login'>Try again</a>");
+    res.send("Invalid email. <a href='/login'>Try again</a>");
     return;
   }
 
   const passwordMatch = await bcrypt.compare(password, user.password);
   if (!passwordMatch) {
-    res.send("Invalid email or password. <a href='/login'>Try again</a>");
+    res.send("Invalid password. <a href='/login'>Try again</a>");
     return;
   }
 
