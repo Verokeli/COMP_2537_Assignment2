@@ -1,0 +1,21 @@
+<%- include("templates/header") %>
+<h1 class="mb-4">Welcome<i class="bi bi-stars"></i></h1>
+<% if (name) { %>
+  <p class="lead">Hello, <strong><%= name %></strong>!</p>
+  <div class="d-flex gap-3 mb-3">
+    <a href="/members" class="btn btn-primary">Go to Members</a>
+    <form action="/logout" method="GET">
+      <button type="submit" class="btn btn-dark">Logout</button>
+    </form>
+  </div>
+<% } else { %>
+  <div class="d-flex gap-3 mb-3">
+    <form action="/signup" method="GET">
+      <button type="submit" class="btn btn-dark">Sign Up</button>
+    </form>
+    <form action="/login" method="GET">
+      <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+  </div>
+<% } %>
+<%- include("templates/footer") %>

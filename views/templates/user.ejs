@@ -1,0 +1,18 @@
+<div class="mb-3 p-3 border rounded">
+    <strong>
+        <% if (user.email===currentEmail) { %>
+            Me (<%= user.user_type %>)
+        <% } else { %>
+            <%= user.name || user.email %> (<%= user.user_type %>)
+        <% } %>
+    </strong>
+
+    <div class="btn-group ms-3" role="group">
+        <% if (user.user_type !=='admin' ) { %>
+            <a href="/admin/promote/<%= user.email %>" class="btn btn-danger">Promote to Admin</a>
+        <% } %>
+        <% if (user.user_type !=='user' ) { %>
+        <a href="/admin/demote/<%= user.email %>" class="btn btn-success">Demote to User</a>
+        <% } %>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<%- include("templates/header") %>
+<h2>Log In</h2>
+
+<% if (typeof message !== 'undefined') { %>
+  <div class="alert alert-danger">
+    <%= message %>
+  </div>
+<% } %>
+
+<div class="p-4 bg-light border rounded">
+  <form action="/login" method="POST" class="mb-3">
+    <div class="mb-3"><input type="email" name="email" class="form-control" required placeholder="email" /></div>
+    <div class="mb-3"><input type="password" name="password" class="form-control" required placeholder="password" />
+    </div>
+    <button type="submit" class="btn btn-primary">Log In</button>
+  </form>
+</div>
+
+<%- include("templates/footer") %>

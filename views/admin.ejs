@@ -1,0 +1,6 @@
+<%- include("templates/header") %>
+<h2 class="mb-4">Admin Dashboard</h2>
+<% users.forEach(user => { %>
+  <%- include("templates/user", { user: user, currentEmail: currentEmail }) %>
+<% }) %>
+<%- include("templates/footer") %>
