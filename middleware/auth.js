@@ -1,12 +1,12 @@
 function requireAuth(req, res, next) {
-  if (!req.session || !req.session.name) {
+  if (!req.session.email) {
     return res.redirect("/login");
   }
   next();
 }
 
 function requireAdmin(req, res, next) {
-  if (!req.session.userId) {
+  if (!req.session.email) {
     return res.redirect('/login');
   }
   if (req.session.userType !== 'admin') {
